@@ -1,3 +1,4 @@
+flag=True
 a=int(input("Enter the first number :"))
 b=int(input("Enter the second number :"))
 print("These are the operators you can choose :")
@@ -11,8 +12,12 @@ if operator=="1":
     replace1="Addition"
     operation=a+b
 if operator=="2":
-    replace1="Subtraction"
-    operation=a-b
+    if a>b:
+        replace1="Subtraction"
+        operation=a-b
+    else:
+        print("Cannot subtract the First number is less than the Second number")
+        flag=False
 if operator=="3":
     replace1="Multiplication"
     operation=a*b
@@ -22,6 +27,7 @@ if operator=="4":
 if operator=="5":
     replace1="Modulus"
     operation=a%b
-print("The result of" ,replace1, "of" ,a, "and" ,b, "is" ,operation)
+if flag==True:
+    print("The result of" ,replace1, "of" ,a, "and" ,b, "is" ,operation)
 
 
