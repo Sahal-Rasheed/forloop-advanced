@@ -6,19 +6,22 @@ print("2.Subtraction")
 print("3.Multiplication")
 print("4.Division")
 print("5.Modulus")
-operators=(input("Please choose an option from these (1,2,3,4,5):"))
-if operator==1:
-    print("The sum of two numbers is", a+b)
+operator=input("Please choose an option from these (1,2,3,4,5):")
+if operator=="1":
+    replace1="Addition"
+    operation=a+b
 if operator=="2":
-    print("The difference of two numbers is", a-b)
+    replace1="Subtraction"
+    operation=a-b
 if operator=="3":
-    print("The product of two numbers is", a*b)
+    replace1="Multiplication"
+    operation=a*b
 if operator=="4":
-    print("The division of two numbers is", a/b)
+    replace1="Division"
+    operation=a//b
 if operator=="5":
-    print("The modulus of two numbers is", a%b)
-if operator>5:
-    print("not valid")
-
+    replace1="Modulus"
+    operation=a%b
+print("The result of" ,replace1, "of" ,a, "and" ,b, "is" ,operation)
 
 
